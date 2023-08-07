@@ -105,26 +105,73 @@ console.log("primeraLetra(\"goku\"): ", primeraLetra("goku"))
 // Implementar una función "ultimaLetra" que nos devuelva la letra final la palabra recibida como parámetro
 // ejemplo: ultimaLetra("Plataformas") retorna "s"
 
-console.log("ultimaLetra(\"Plataformas\"): ", ultimaLetra("Plataformas"))
+function ultimaLetra(palabra) {
+  
+  if (!palabra || palabra.length === 0) {
+    return null;
+  }
+
+  
+  const ultimaLetra = palabra.charAt(palabra.length - 1);
+
+  return ultimaLetra;
+}
+
+
+console.log("ultimaLetra(\"goku\"): ", ultimaLetra("goku"))
 
 
 // Implementar una función "primeraLetraMayuscula" que devuelve la palabra original con su primera letra en mayúscula
 // ejemplo: primeraLetraMayuscula("plataformas") retorna "Plataformas"
 
-console.log("primeraLetraMayuscula(\"plataformas\"): ", primeraLetraMayuscula("plataformas"))
+function primeraLetraMayuscula(palabra) {
+  
+  if (!palabra || palabra.length === 0) {
+    return palabra;
+  }
+
+  const palabraMayuscula = palabra.charAt(0).toUpperCase() + palabra.slice(1).toLowerCase();
+
+  return palabraMayuscula;
+}
+
+
+console.log("primeraLetraMayuscula(\"river\"): ", primeraLetraMayuscula("river"))
 
 // Implementar una función "palabraAListaDeLetras" que dada una palabra me retorne un listado de sus letras
 // ejemplo: palabraAListaDeLetras("hola") retorna ['h', 'o', 'l', 'a'];
 
-console.log("palabraAListaDeLetras(\"hola\"): ", palabraAListaDeLetras("hola"))
+function palabraAListaDeLetras(palabra) {
+  
+  if (!palabra || palabra.length === 0) {
+    return [];
+  }
+
+  const listaDeLetras = palabra.split('');
+
+  return listaDeLetras;
+}
+
+
+console.log("palabraAListaDeLetras(\"dragonball\"): ", palabraAListaDeLetras("dragonball"))
 
 // Implementar una función "listaDeLetrasAPalabra" que dado un listado de letras, devuelva una palabra
 // ejemplo: listadoDeLetrasAPalabra(["h", "o", "l", "a"]) retorna "hola";
 
+function listadoDeLetrasAPalabra(unir){
+    return unir.join('');
+}
 console.log("listadoDeLetrasAPalabra([\"h\", \"o\", \"l\", \"a\"]): ", listadoDeLetrasAPalabra(["h", "o", "l", "a"]))
+
+
 
 // Implementar una función "palabraInvertida" que devuelva la palabra invertida
 // ejemplo: palabraInvertida("hola") retorna "aloh";
+
+function palabraInvertida(orden){
+    return orden.split("").reverse().join('')
+}
+
 
 console.log("palabraInvertida(\"hola\"): ", palabraInvertida("hola"))
 
